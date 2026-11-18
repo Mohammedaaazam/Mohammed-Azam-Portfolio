@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Azam — Training & Learning Specialist | Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a2e;
+  background: #fafbfc;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid #eaeef0;
+}
+
+nav .nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+nav .logo {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a1a2e;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: .25rem;
+}
+
+nav ul li a {
+  padding: .5rem .85rem;
+  text-decoration: none;
+  color: #555;
+  font-size: .82rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all .2s;
+}
+
+nav ul li a:hover {
+  color: #1a1a2e;
+  background: #f0f2f5;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(233,69,96,.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(15,52,96,.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-content {
+  max-width: 850px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .avatar-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #e94560, #0f3460);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  border: 3px solid rgba(255,255,255,.15);
+  box-shadow: 0 20px 60px rgba(233,69,96,.25);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #fff;
+  margin-bottom: .4rem;
+  line-height: 1.15;
+}
+
+.hero .tagline {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.7);
+  margin-bottom: .6rem;
+}
+
+.hero .badge-row {
+  display: flex;
+  justify-content: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.hero .badge-row span {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  padding: .3rem 1rem;
+  border-radius: 20px;
+  font-size: .78rem;
+  color: rgba(255,255,255,.8);
+  font-weight: 500;
+}
+
+.hero .location {
+  color: rgba(255,255,255,.5);
+  font-size: .92rem;
+  margin-bottom: 2rem;
+}
+
+.hero .cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero .cta-row a {
+  padding: .75rem 2rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .25s;
+}
+
+.hero .cta-row .btn-primary {
+  background: #e94560;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(233,69,96,.35);
+}
+
+.hero .cta-row .btn-primary:hover {
+  background: #d63851;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(233,69,96,.45);
+}
+
+.hero .cta-row .btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.3);
+}
+
+.hero .cta-row .btn-outline:hover {
+  border-color: #e94560;
+  background: rgba(233,69,96,.1);
+}
+
+/* Container */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+/* Section */
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-header .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #1a1a2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.3px;
+}
+
+.section-header .sub {
+  font-size: .85rem;
+  color: #999;
+  font-weight: 400;
+  margin-left: auto;
+}
+
+/* About */
+#about p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 850px;
+  line-height: 1.8;
+}
+
+#about .highlight {
+  color: #e94560;
+  font-weight: 600;
+}
+
+#about .stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #eaeef0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.06);
+}
+
+.stat-card .num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1;
+}
+
+.stat-card .label {
+  font-size: .82rem;
+  color: #888;
+  margin-top: .3rem;
+  font-weight: 500;
+}
+
+/* Tabs for skills/exp toggle */
+.tabs {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eaeef0;
+  padding-bottom: .5rem;
+}
+
+.tab {
+  padding: .5rem 1.2rem;
+  border: none;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  font-size: .88rem;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all .2s;
+}
+
+.tab:hover { color: #1a1a2e; background: #f0f2f5; }
+
+.tab.active {
+  color: #1a1a2e;
+  background: #eaeef0;
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+.skill-card {
+  background: #fff;
+  border: 1px solid #eaeef0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+
+.skill-card h3 {
+  font-size: .78rem;
+  font-weight: 600;
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-bottom: .8rem;
+}
+
+.skill-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.skill-card .tags span {
+  background: #f0f2f5;
+  padding: .3rem .85rem;
+  border-radius: 6px;
+  font-size: .82rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Timeline */
+.timeline { position: relative; }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #eaeef0;
+}
+
+.timeline-item {
+  padding-left: 50px;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-item .dot {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e94560;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #e94560;
+}
+
+.timeline-item .period {
+  font-size: .75rem;
+  font-weight: 600;
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  font-family: 'Inter', sans-serif;
+}
+
+.timeline-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: .15rem 0 .05rem;
+  color: #1a1a2e;
+}
+
+.timeline-item .company {
+  font-size: .9rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: .6rem;
+}
+
+.timeline-item ul {
+  list-style: none;
+}
+
+.timeline-item ul li {
+  font-size: .9rem;
+  color: #555;
+  margin-bottom: .25rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.timeline-item ul li::before {
+  content: '';
+  position: absolute;
+  left: .25rem;
+  top: .6rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+/* Certs grid */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.cert-card {
+  background: #fff;
+  border: 1px solid #eaeef0;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.cert-card h3 {
+  font-size: .78rem;
+  font-weight: 600;
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-bottom: .8rem;
+}
+
+.cert-card ul {
+  list-style: none;
+}
+
+.cert-card ul li {
+  font-size: .88rem;
+  color: #444;
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: .35rem;
+}
+
+.cert-card ul li::before {
+  content: '';
+  position: absolute;
+  left: .2rem;
+  top: .55rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e94560;
+}
+
+.cert-card p {
+  font-size: .88rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.lang-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.lang-badges span {
+  background: #1a1a2e;
+  color: #fff;
+  padding: .3rem .85rem;
+  border-radius: 6px;
+  font-size: .78rem;
+  font-weight: 500;
+}
+
+/* Contact */
+#contact {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#contact .container { max-width: 700px; }
+
+#contact h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+#contact .sub {
+  color: rgba(255,255,255,.5);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.contact-grid a {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: .9rem;
+  transition: all .25s;
+}
+
+.contact-grid a:hover {
+  background: rgba(233,69,96,.15);
+  border-color: #e94560;
+  transform: translateY(-2px);
+}
+
+.contact-grid a .label {
+  display: block;
+  font-size: .72rem;
+  color: rgba(255,255,255,.4);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: .8rem;
+  color: #999;
+  background: #fafbfc;
+  border-top: 1px solid #eaeef0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero .tagline { font-size: .95rem; }
+  nav .logo { display: none; }
+  nav ul { width: 100%; justify-content: center; }
+  .section-header { flex-wrap: wrap; }
+  .section-header .sub { margin-left: 0; width: 100%; }
+}
+
+/* Print-friendly for CV download */
+@media print {
+  nav, .hero .cta-row { display: none; }
+  .hero { min-height: auto; padding: 3rem 2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">MA</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="avatar-circle">MA</div>
+    <h1>Mohammed Azam</h1>
+    <div class="tagline">Training &amp; Learning Specialist · Data Analyst · SAP ABAP Consultant</div>
+    <div class="badge-row">
+      <span>20+ Years Experience</span>
+      <span>Excel VBA Expert</span>
+      <span>Power BI</span>
+      <span>SAP ABAP Certified</span>
+      <span>MCP Certified</span>
+    </div>
+    <div class="location">Abu Dhabi, United Arab Emirates</div>
+    <div class="cta-row">
+      <a href="mailto:mohd_aazam@yahoo.com" class="btn-primary">&#9993; Hire Me</a>
+      <a href="#" class="btn-outline" onclick="window.print();return false;">&#128196; Download CV</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="icon">&#10003;</div>
+      <h2>About Me</h2>
+      <div class="sub">Abu Dhabi, UAE</div>
+    </div>
+    <p>
+      Results-oriented <span class="highlight">Training &amp; Learning Specialist</span> and <span class="highlight">Data Analyst</span> with over <strong>20 years</strong> of experience spanning software development, data analytics, corporate training, and SAP consulting. Skilled in designing engaging training content, measuring learning outcomes via Kirkpatrick's model, and building powerful analytical reports using <strong>Excel VBA, Power BI, SQL, and SAP ABAP</strong>. Adept at needs assessment, LMS administration, and fostering a culture of continuous learning. Multilingual professional fluent in <strong>English, Arabic, Urdu, Hindi, and Telugu</strong> — ready to drive impact in the UAE market.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="num">20+</div>
+        <div class="label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">5</div>
+        <div class="label">Languages</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">2</div>
+        <div class="label">Professional Certs</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">4</div>
+        <div class="label">Industry Verticals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <div class="icon">&#9819;</div>
+      <h2>Professional Experience</h2>
+      <div class="sub">2001 – Present</div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="period">Feb 2026 – Present</div>
+        <h3>Information &amp; Technology Consultant</h3>
+        <div class="company">Connectell</div>
+        <ul>
+          <li>Delivering IT consulting services for data solutions, system optimization, and training enablement.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="period">Nov 2018 – Present</div>
+        <h3>Data Analyst Consultant</h3>
+        <div class="company">High Noon Consulting &amp; Marifaat Co</div>
+        <ul>
+          <li>Developed analytical &amp; financial reports (Excel VBA, Power BI, MS Access) for business decision-making.</li>
+          <li>Built automation macros with ODBC, scripting objects, and email distribution workflows.</li>
+          <li>Created SQL queries on Oracle databases for data extraction and analysis.</li>
+          <li>Designed budget templates and asset management tools adopted across the organization.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="period">Feb 2010 – Oct 2018</div>
+        <h3>Senior Developer — VBA / SQL / Power BI</h3>
+        <div class="company">Binzagr Co, Jeddah, Saudi Arabia</div>
+        <ul>
+          <li>Built graphical and static sales analysis reports for C-level decision-making.</li>
+          <li>Generated daily stock reports for global vendors (Unilever, Carlsberg, Kellogg's, Heinz).</li>
+          <li>Developed financial reports: Cash Journal, Profit &amp; Loss, account statements.</li>
+          <li>Created executive presentations and process flowcharts (Visio, PowerPoint).</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="period">Feb 2007 – Jul 2009</div>
+        <h3>Senior ABAP Developer (HR &amp; FICO/SD/MM)</h3>
+        <div class="company">Binzagr Co, Jeddah — SAP Implementation</div>
+        <ul>
+          <li>Designed Infotypes for employee data management with Arabic name support.</li>
+          <li>Developed Saudi payroll reconciliation reports and bank infotype IBAN customization.</li>
+          <li>Implemented FICO blocking logic, SD pricing enhancements, and MM insurance reports.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="period">Oct 2001 – Jan 2007</div>
+        <h3>Senior System Analyst</h3>
+        <div class="company">Binzagr Co, Jeddah, Saudi Arabia</div>
+        <ul>
+          <li>Developed and supported Oracle/VB systems for a leading FMCG distributor.</li>
+          <li>Delivered daily stock, sales, and brand performance insights to commercial teams.</li>
+          <li>Built KPI dashboards tracking sales achievement against targets.</li>
+          <li>Created statistical and graphical analysis programs for brand monitoring.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <div class="icon">&#9733;</div>
+      <h2>Skills &amp; Expertise</h2>
+      <div class="sub">6 domains</div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Data &amp; Analytics</h3>
+        <div class="tags">
+          <span>Excel VBA</span><span>Power BI</span><span>SQL</span><span>Python</span><span>MS Access</span><span>ODBC</span><span>Data Visualization</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>SAP Technologies</h3>
+        <div class="tags">
+          <span>ABAP</span><span>ABAP HR</span><span>LSMW</span><span>BAPI</span><span>BDC</span><span>PI</span><span>Workflow</span><span>Web Dynpro</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Training &amp; L&amp;D</h3>
+        <div class="tags">
+          <span>Content Design</span><span>Needs Assessment</span><span>LMS Admin</span><span>Facilitation</span><span>E-Learning</span><span>Kirkpatrick Model</span><span>Onboarding</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <div class="tags">
+          <span>Oracle</span><span>VB/VB.NET</span><span>COBOL</span><span>ABAP</span><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <div class="tags">
+          <span>Oracle 10g</span><span>SQL Server</span><span>MySQL</span><span>MS Access</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Tools &amp; Applications</h3>
+        <div class="tags">
+          <span>MS Excel (Advanced)</span><span>MS Word</span><span>PowerPoint</span><span>Visio</span><span>Outlook</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <div class="icon">&#8962;</div>
+      <h2>Education</h2>
+    </div>
+
+    <div class="certs-grid">
+      <div class="cert-card">
+        <h3>Bachelor of Arts</h3>
+        <ul>
+          <li>Osmania University, Hyderabad — 1996</li>
+        </ul>
+      </div>
+      <div class="cert-card">
+        <h3>Diploma in English Proficiency</h3>
+        <p>Osmania University</p>
+      </div>
+      <div class="cert-card">
+        <h3>PGDCA</h3>
+        <p>Post Graduate Diploma in Computer Application</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <div class="icon">&#9888;</div>
+      <h2>Certifications &amp; Highlights</h2>
+    </div>
+
+    <div class="certs-grid">
+      <div class="cert-card">
+        <h3>Professional Certifications</h3>
+        <ul>
+          <li>Microsoft Certified Professional (MCP) — Visual Basic</li>
+          <li>SAP ABAP Certified Development Consultant</li>
+        </ul>
+      </div>
+      <div class="cert-card">
+        <h3>Specialized Training</h3>
+        <ul>
+          <li>MS Visual Basic .NET — Microsoft Arabia</li>
+          <li>Oracle Developer — Oracle Corporation Saudi Arabia</li>
+          <li>Advanced Visual Basic — NIIT</li>
+          <li>Advanced Microsoft Excel</li>
+        </ul>
+      </div>
+      <div class="cert-card">
+        <h3>Languages</h3>
+        <div class="lang-badges">
+          <span>English</span>
+          <span>Arabic</span>
+          <span>Urdu</span>
+          <span>Hindi</span>
+          <span>Telugu</span>
+        </div>
+        <br>
+        <h3 style="margin-top:.8rem;">Strengths</h3>
+        <p>Team Player · Client Rapport · Flexible &amp; Hardworking · Quick Learner · SAP Expert · Advanced Excel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Let's Work Together</h2>
+    <div class="sub">Available for Training, Data Analytics, and SAP Consulting roles in Abu Dhabi &amp; UAE</div>
+    <div class="contact-grid">
+      <a href="mailto:mohd_aazam@yahoo.com">
+        <span class="label">Email</span>
+        mohd_aazam@yahoo.com
+      </a>
+      <a href="tel:+971506065974">
+        <span class="label">Phone</span>
+        +971 50 606 5974
+      </a>
+      <a href="#">
+        <span class="label">Location</span>
+        Abu Dhabi, UAE
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Mohammed Azam — Built for opportunity
+</footer>
+
+</body>
+</html>
