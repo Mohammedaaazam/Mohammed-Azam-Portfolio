@@ -1,6 +1,7 @@
 # Mohammed Azam — Portfolio
 
-Professional portfolio website for **Mohammed Azam**, a **Training & Learning Specialist**, **Data Analyst**, and **SAP ABAP Consultant** based in Abu Dhabi, UAE.
+Professional portfolio
+**Mohammed Azam**, a **Training & Learning Specialist**, **Data Analyst**, and **SAP ABAP Consultant** based in Abu Dhabi, UAE.
 
 ## Sections
 
